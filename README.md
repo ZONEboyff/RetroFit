@@ -41,10 +41,6 @@ To get started with RetroFit, follow these steps:
      ```sql
      CREATE DATABASE retrofit;
      ```
-   - Apply Django migrations:
-     ```bash
-     python manage.py migrate
-     ```
 
 4. **Set Up the Frontend**:
    - Open the project in Android Studio.
