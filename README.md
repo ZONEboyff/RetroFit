@@ -13,12 +13,11 @@ Welcome to RetroFit! Our fitness app is designed to help you plan exercise routi
 ## Introduction
 RetroFit is a fitness tracker app that allows users to plan their exercise routines and gain insights into their progress. Our goal is to provide a user-friendly platform that helps you stay motivated and reach your fitness goals.
 
-## Features
+## FeaturesPowered by Python with Django and 
 - **Exercise Planning**: Create and customize workout plans tailored to your fitness level and goals.
 - **Progress Tracking**: Monitor your progress with detailed insights and analytics.
-- **Wildlife Images**: Stay motivated with inspiring wildlife images sourced from APIs.
 - **User-Friendly Interface**: Enjoy a seamless experience with our intuitive design using Android Studio with Jetpack Compose.
-- **Backend Support**: Powered by Python with Django and MySQL for efficient data management.
+- **Backend Support**: MySQL for efficient data management.
 
 ## Installation
 To get started with RetroFit, follow these steps:
@@ -26,7 +25,7 @@ To get started with RetroFit, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/yourusername/RetroFit.git
-   ```
+   ```Powered by Python with Django and 
 
 2. **Navigate to the Project Directory**:
    ```bash
