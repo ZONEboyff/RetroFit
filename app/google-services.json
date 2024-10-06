@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "673157294417",
+    "project_id": "retrofit-adc17",
+    "storage_bucket": "retrofit-adc17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673157294417:android:cdd43b509574baacd68b70",
+        "android_client_info": {
+          "package_name": "com.example.retrofit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673157294417-aen3si5sq6kv4u8vv2236i8nmo16vptr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.retrofit",
+            "certificate_hash": "73cd1b57bcebdec9a008439142b264c773b24412"
+          }
+        },
+        {
+          "client_id": "673157294417-rbn8s3j09ogc3rkcvu1nmfds602n00hk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2n0a3NnaAcamk1lO3jbDlwQJSl1L-1BI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673157294417-rbn8s3j09ogc3rkcvu1nmfds602n00hk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
