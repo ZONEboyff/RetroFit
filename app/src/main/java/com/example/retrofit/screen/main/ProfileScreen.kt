@@ -1,6 +1,7 @@
 package com.example.retrofit.screen.main
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,6 +18,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,14 +36,14 @@ import com.example.retrofit.R
 
 @Composable
 fun ProfileScreen() {
-    val height = 167
+    val height = 169
     val weight = 55
     val username="Jeff Powell"
     val age = 26
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF2C0926)),
+            .background(Color(0xFF632E5A)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
@@ -51,13 +53,14 @@ fun ProfileScreen() {
             modifier = Modifier.padding(16.dp)
         )
         Spacer(modifier = Modifier.size(16.dp))
+        //profile picture
         Box(
             modifier= Modifier
                 .clip(shape = CircleShape)
                 .size(117.dp, 117.dp)
                 .background(color = Color.White)
         ) {
-            val profile_icon = painterResource(id = R.drawable.profile_icon)
+            val profile_icon = painterResource(id = R.drawable.profile_icon2)
             Icon(
                 painter = profile_icon,
                 contentDescription = "Profile icon",
@@ -169,13 +172,15 @@ fun ProfileScreen() {
                         .fillMaxWidth()
                         .padding(16.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
-                ){
-                    Text(text="Account", fontWeight = FontWeight.Bold)
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
-                        contentDescription = null,
-                        modifier=Modifier.size(24.dp)
-                    )
+                ) {
+                    Text(text = "Account", fontWeight = FontWeight.Bold)
+                    IconButton(onClick = {}) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                            contentDescription = null,
+                            modifier = Modifier.size(24.dp)
+                        )
+                    }
                 }
                 Row (
                     modifier = Modifier
@@ -209,7 +214,12 @@ fun ProfileScreen() {
                         .padding(16.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ){
-                    Text("Log out", fontWeight = FontWeight.Bold)
+                    Text(
+                        text="Log out",
+                        fontWeight = FontWeight.Bold,
+                        modifier=Modifier
+                            .clickable(onClick = {/*implement logout logic*/})
+                    )
                 }
             }
         }
