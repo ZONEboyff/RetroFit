@@ -41,7 +41,7 @@ import com.example.retrofit.R
 import java.util.Calendar
 
 @Composable
-fun DateOfBirthScreen(onNextClicked: () -> Unit, onBackClicked: () -> Unit) {
+fun DateOfBirthScreen(onNextClicked: (String) -> Unit, onBackClicked: () -> Unit) {
     // State for holding selected date
     var selectedDate by remember { mutableStateOf("") }
 
@@ -135,7 +135,7 @@ fun DateOfBirthScreen(onNextClicked: () -> Unit, onBackClicked: () -> Unit) {
 
         // Next Button with Gradient Background
         Button(
-            onClick = { onNextClicked() },
+            onClick = { onNextClicked(selectedDate) },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp)
