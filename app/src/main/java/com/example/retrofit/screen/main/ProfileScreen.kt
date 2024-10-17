@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -46,6 +47,7 @@ fun ProfileScreen() {
             .background(Color(0xFF632E5A)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Spacer(modifier=Modifier.height(32.dp))
         Text(
             text = "PROFILE",
             fontSize = 23.sp,
@@ -82,13 +84,13 @@ fun ProfileScreen() {
                     containerColor = MaterialTheme.colorScheme.surfaceVariant,
                 ),
                 modifier = Modifier
-                    .size(width = 96.dp, height = 89.dp)
+                    .size(width = 98.dp, height = 98.dp)
             ) {
 
                 Column(
                     modifier = Modifier
                         .padding(8.dp)
-                        .size(width = 96.dp, height = 89.dp),
+                        .size(width = 98.dp, height = 98.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement =  Arrangement.Center
                 ) {
@@ -110,13 +112,13 @@ fun ProfileScreen() {
                     containerColor = MaterialTheme.colorScheme.surfaceVariant,
                 ),
                 modifier = Modifier
-                    .size(width = 96.dp, height = 89.dp)
+                    .size(width = 98.dp, height = 98.dp)
             ) {
 
                 Column(
                     modifier = Modifier
                         .padding(8.dp)
-                        .size(width = 96.dp, height = 89.dp),
+                        .size(width = 98.dp, height = 98.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement =  Arrangement.Center
                 ) {
@@ -138,13 +140,13 @@ fun ProfileScreen() {
                     containerColor = MaterialTheme.colorScheme.surfaceVariant,
                 ),
                 modifier = Modifier
-                    .size(width = 96.dp, height = 89.dp)
+                    .size(width = 98.dp, height = 98.dp)
             ) {
 
                 Column(
                     modifier = Modifier
                         .padding(8.dp)
-                        .size(width = 96.dp, height = 89.dp),
+                        .size(width = 98.dp, height = 98.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement =  Arrangement.Center
                 ) {
@@ -166,12 +168,14 @@ fun ProfileScreen() {
         Card(
             modifier = Modifier.padding(32.dp)
         ) {
-            Column {
+            Column(
+                modifier=Modifier.padding(16.dp)
+            ) {
                 Row (
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween
+                    horizontalArrangement = Arrangement.SpaceBetween,
                 ) {
                     Text(text = "Account", fontWeight = FontWeight.Bold)
                     IconButton(onClick = {}) {
