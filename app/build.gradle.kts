@@ -51,14 +51,18 @@ android {
 }
 
 dependencies {
-    implementation("androidx.navigation:navigation-compose:2.7.7")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3")
-    implementation("androidx.compose.runtime:runtime-livedata:1.7.1")
-    implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
-    implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.firebase:firebase-firestore")
-    implementation("com.google.android.gms:play-services-auth:20.5.0")
+    // Add Firebase Authentication
+    implementation (libs.google.firebase.auth)
+    implementation (libs.firebase.database)
+
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.runtime.livedata)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.play.services.auth)
 
 
     implementation(libs.androidx.core.ktx)
@@ -69,6 +73,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.media3.common.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

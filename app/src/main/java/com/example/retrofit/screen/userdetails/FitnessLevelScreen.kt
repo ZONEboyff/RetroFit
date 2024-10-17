@@ -39,7 +39,7 @@ import androidx.compose.ui.unit.dp
 import com.example.retrofit.R
 
 @Composable
-fun FitnessStatusScreen(onDoneClicked: () -> Unit, onBackClicked: () -> Unit) {
+fun FitnessStatusScreen(onDoneClicked: (Float) -> Unit, onBackClicked: () -> Unit) {
     var sliderPosition by remember { mutableStateOf(0f) }
 
     Column(
@@ -167,7 +167,7 @@ fun FitnessStatusScreen(onDoneClicked: () -> Unit, onBackClicked: () -> Unit) {
 
         // Done Button with Gradient Background
         Button(
-            onClick = { onDoneClicked() },
+            onClick = { onDoneClicked(sliderPosition) },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp)
@@ -184,8 +184,3 @@ fun FitnessStatusScreen(onDoneClicked: () -> Unit, onBackClicked: () -> Unit) {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun FitnessStatusScreenPreview() {
-    FitnessStatusScreen(onDoneClicked = {}, onBackClicked = {})
-}
