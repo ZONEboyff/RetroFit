@@ -41,11 +41,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.retrofit.R
+import com.example.retrofit.viewmodel.AuthViewModel
 
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun UserMetricsScreen(onNextClicked: () -> Unit, onBackClicked: () -> Unit) {
+fun UserMetricsScreen(onNextClicked: (String,String) -> Unit, onBackClicked: () -> Unit) {
     val heightState = remember { mutableStateOf("169") }
     val weightState = remember { mutableStateOf("69") }
     var isCmSelected by remember { mutableStateOf(true) }
@@ -149,7 +150,7 @@ fun UserMetricsScreen(onNextClicked: () -> Unit, onBackClicked: () -> Unit) {
 
         // Next Button
         Button(
-            onClick = { onNextClicked() },
+            onClick = { onNextClicked(heightState.value,weightState.value) },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp)
@@ -197,10 +198,6 @@ fun UnitToggleButton(
         }
     }
 }
-@RequiresApi(Build.VERSION_CODES.O)
-@Preview(showBackground = true)
-@Composable
-fun UserMetricsScreenPreview() {
-    UserMetricsScreen({}){}
-}
+
+
 

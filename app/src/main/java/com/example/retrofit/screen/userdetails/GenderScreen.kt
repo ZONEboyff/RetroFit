@@ -39,7 +39,7 @@ import androidx.compose.ui.unit.dp
 import com.example.retrofit.R
 
 @Composable
-fun GenderScreen(onNextClicked: () -> Unit, onBackClicked: () -> Unit) {
+fun GenderScreen(onNextClicked: (String) -> Unit, onBackClicked: () -> Unit) {
     var selectedGender by remember { mutableStateOf<String?>(null) }
 
     Column(
@@ -120,7 +120,7 @@ fun GenderScreen(onNextClicked: () -> Unit, onBackClicked: () -> Unit) {
 
         // Next Button with Gradient Background
         Button(
-            onClick = { onNextClicked() },
+            onClick = { onNextClicked(selectedGender.let { "" }) },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp)

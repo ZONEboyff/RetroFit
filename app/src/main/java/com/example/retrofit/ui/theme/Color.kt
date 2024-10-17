@@ -17,3 +17,5 @@ val gradient = Brush.linearGradient(
     start = Offset(0f,0f),
     end = Offset(0f,3000f)
 )
+val backGroundColor = Color(0xFF2C0926)
+val contrastColor = Color(0xFF632E5A)
